@@ -1,365 +1,837 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MARWADI TRADERS - Premium Intelligence</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
-        
-        * {
-            box-sizing: border-box;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            -webkit-tap-highlight-color: transparent;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            background: #020617;
-            color: #ffffff;
-            min-height: 100vh;
-            overflow-x: hidden;
-            position: relative;
-        }
+<title>Bright Future Education | Education Proposal</title>
 
-        #canvas-stars {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            pointer-events: none;
-        }
+<meta name="description" content="Bright Future Education - Quality education, career guidance and professional learning programs.">
 
-        .ambient-glow {
-            position: absolute;
-            top: -120px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 380px;
-            height: 380px;
-            background: radial-gradient(circle, rgba(16, 185, 129, 0.25) 0%, rgba(59, 130, 246, 0.2) 40%, rgba(0,0,0,0) 70%);
-            border-radius: 50%;
-            filter: blur(50px);
-            z-index: 1;
-            pointer-events: none;
-            animation: pulseGlow 5s ease-in-out infinite alternate;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
 
-        @keyframes pulseGlow {
-            0% { opacity: 0.6; transform: translateX(-50%) scale(0.95); }
-            100% { opacity: 1; transform: translateX(-50%) scale(1.1); }
-        }
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    color:#172033;
+    background:#f7f9fc;
+    line-height:1.6;
+}
 
-        .glass-card-v2 {
-            background: rgba(15, 23, 42, 0.75);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
-        }
+:root{
+    --primary:#3157d5;
+    --secondary:#18a999;
+    --dark:#172033;
+    --light:#f7f9fc;
+    --white:#ffffff;
+}
 
-        .inner-feature-box {
-            background: rgba(30, 41, 59, 0.5);
-            border: 1px solid rgba(51, 65, 85, 0.7);
-            backdrop-filter: blur(12px);
-        }
+/* NAVBAR */
+header{
+    background:#fff;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 15px rgba(0,0,0,.08);
+}
 
-        .cta-btn-glow {
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            box-shadow: 0 0 25px rgba(16, 185, 129, 0.4);
-            transition: all 0.3s ease;
-        }
+.navbar{
+    max-width:1150px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:18px 20px;
+}
 
-        .cta-btn-glow:hover {
-            box-shadow: 0 0 35px rgba(16, 185, 129, 0.6);
-            transform: translateY(-2px);
-        }
+.logo{
+    font-size:24px;
+    font-weight:800;
+    color:var(--primary);
+}
 
-        .fade-in-up {
-            animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
+.logo span{
+    color:var(--secondary);
+}
 
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(24px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+nav a{
+    text-decoration:none;
+    color:#333;
+    margin-left:25px;
+    font-weight:600;
+}
 
-        /* Modal Styles */
-        .modal {
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
-        }
-        .modal.active {
-            opacity: 1;
-            visibility: visible;
-            pointer-events: auto;
-        }
-    </style>
-  <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2113827589206023');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2113827589206023&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+nav a:hover{
+    color:var(--primary);
+}
+
+/* HERO */
+.hero{
+    background:linear-gradient(135deg,#3157d5,#5d78e8);
+    color:#fff;
+    padding:90px 20px;
+}
+
+.hero-container{
+    max-width:1150px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:50px;
+    align-items:center;
+}
+
+.hero h1{
+    font-size:52px;
+    line-height:1.15;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#8ff0df;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:650px;
+    margin-bottom:30px;
+    opacity:.95;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 25px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:700;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:#fff;
+    color:var(--primary);
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+}
+
+.btn-outline{
+    border:2px solid #fff;
+    color:#fff;
+}
+
+.btn-outline:hover{
+    background:#fff;
+    color:var(--primary);
+}
+
+/* HERO CARD */
+.hero-card{
+    background:#fff;
+    color:var(--dark);
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
+}
+
+.hero-card h3{
+    font-size:25px;
+    margin-bottom:15px;
+}
+
+.hero-card p{
+    color:#606979;
+    font-size:15px;
+    margin-bottom:20px;
+}
+
+.stat{
+    display:flex;
+    justify-content:space-between;
+    padding:14px 0;
+    border-bottom:1px solid #eee;
+}
+
+.stat:last-child{
+    border-bottom:0;
+}
+
+.stat strong{
+    color:var(--primary);
+}
+
+/* GENERAL */
+section{
+    padding:80px 20px;
+}
+
+.container{
+    max-width:1150px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title h2{
+    font-size:36px;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#687386;
+}
+
+/* ABOUT */
+.about{
+    background:#fff;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:45px;
+    align-items:center;
+}
+
+.about-box{
+    background:#f4f7ff;
+    padding:30px;
+    border-radius:15px;
+}
+
+.about-box h3{
+    font-size:25px;
+    margin-bottom:15px;
+}
+
+.about-box p{
+    color:#626d7e;
+}
+
+/* COURSES */
+.course-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.course{
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 8px 25px rgba(30,50,90,.08);
+    transition:.3s;
+}
+
+.course:hover{
+    transform:translateY(-7px);
+}
+
+.icon{
+    width:55px;
+    height:55px;
+    border-radius:12px;
+    background:#e9edff;
+    color:var(--primary);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+    margin-bottom:20px;
+}
+
+.course h3{
+    margin-bottom:10px;
+}
+
+.course p{
+    color:#697486;
+}
+
+/* WHY US */
+.why{
+    background:#fff;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.why-box{
+    text-align:center;
+    padding:25px 15px;
+}
+
+.why-box .number{
+    font-size:35px;
+    font-weight:800;
+    color:var(--primary);
+}
+
+.why-box h3{
+    margin:8px 0;
+}
+
+.why-box p{
+    color:#6c7584;
+    font-size:14px;
+}
+
+/* PROPOSAL */
+.proposal{
+    background:#eef3ff;
+}
+
+.proposal-content{
+    max-width:900px;
+    margin:auto;
+    background:#fff;
+    padding:45px;
+    border-radius:18px;
+    box-shadow:0 10px 35px rgba(40,60,100,.08);
+}
+
+.proposal-content h3{
+    font-size:27px;
+    margin-bottom:15px;
+}
+
+.proposal-content p{
+    color:#626d7d;
+    margin-bottom:15px;
+}
+
+.proposal-list{
+    list-style:none;
+    margin:20px 0;
+}
+
+.proposal-list li{
+    padding:10px 0;
+    border-bottom:1px solid #eee;
+}
+
+.proposal-list li::before{
+    content:"✓";
+    color:var(--secondary);
+    font-weight:bold;
+    margin-right:10px;
+}
+
+/* CONTACT */
+.contact{
+    background:#172033;
+    color:#fff;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact h2{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+.contact p{
+    color:#c5ccda;
+}
+
+.contact-card{
+    background:#fff;
+    color:#172033;
+    padding:30px;
+    border-radius:15px;
+}
+
+.contact-item{
+    padding:15px 0;
+    border-bottom:1px solid #eee;
+}
+
+.contact-item:last-child{
+    border-bottom:0;
+}
+
+.contact-item strong{
+    display:block;
+    margin-bottom:4px;
+}
+
+/* FOOTER */
+footer{
+    background:#0f1523;
+    color:#aeb6c5;
+    text-align:center;
+    padding:25px 20px;
+    font-size:14px;
+}
+
+/* MOBILE */
+@media(max-width:850px){
+
+    nav{
+        display:none;
+    }
+
+    .hero-container,
+    .about-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        padding:65px 20px;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .course-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .why-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:550px){
+
+    section{
+        padding:60px 15px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .course-grid,
+    .why-grid{
+        grid-template-columns:1fr;
+    }
+
+    .proposal-content{
+        padding:25px;
+    }
+
+    .section-title h2{
+        font-size:30px;
+    }
+}
+</style>
 </head>
-<body class="flex justify-center items-center py-8 px-4">
 
-    <canvas id="canvas-stars"></canvas>
-    <div class="ambient-glow"></div>
+<body>
 
-    <div class="relative z-10 w-full max-w-[400px] glass-card-v2 rounded-[36px] p-6 text-center fade-in-up">
-        
-        <!-- Live Alert Banner -->
-        <div class="flex items-center justify-between bg-slate-900/90 border border-slate-700/60 rounded-full py-1.5 px-3 mb-6 text-[11px] font-semibold text-slate-300">
-            <span class="flex items-center gap-1.5">
-                <span class="relative flex h-2.5 w-2.5">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-                </span>
-                Live Market Signals
-            </span>
-            <span class="text-emerald-400 font-bold">5,000+ Active Traders</span>
+<!-- HEADER -->
+<header>
+    <div class="navbar">
+
+        <div class="logo">
+            Bright<span>Future</span>
         </div>
 
-        <!-- Avatar & Brand Header -->
-        <div class="relative flex justify-center mb-4">
-            <div class="p-[3px] rounded-full bg-gradient-to-tr from-emerald-500 via-blue-500 to-indigo-500 shadow-xl">
-                <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-slate-950 bg-slate-900">
-                    <img src="WhatsApp Image 2026-09-01 at 7.49.53 PM.jpeg" alt="WAY2LAABH" class="w-full h-full object-cover">
-                </div>
-            </div>
-            <div class="absolute bottom-1 right-1/2 translate-x-9 bg-emerald-500 text-slate-950 w-6 h-6 rounded-full flex items-center justify-center border-2 border-slate-950 text-[11px] font-black shadow-md">
-                <i class="fa-solid fa-check"></i>
-            </div>
-        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#courses">Programs</a>
+            <a href="#proposal">Proposal</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
-        <h1 class="text-2xl font-black tracking-tight text-white uppercase mb-0.5">
-            MARWADI TRADERS
-        </h1>
-        <h2 class="text-sm font-extrabold tracking-widest text-emerald-400 uppercase mb-4">
-            Stock Selection & Market Intelligence
-        </h2>
+    </div>
+</header>
 
-        <!-- Tags Badge -->
-        <div class="flex flex-wrap justify-center gap-1.5 mb-6">
-            <span class="bg-emerald-950/60 border border-emerald-500/30 text-emerald-300 text-[10px] font-bold px-3 py-1 rounded-full">NIFTY</span>
-            <span class="bg-blue-950/60 border border-blue-500/30 text-blue-300 text-[10px] font-bold px-3 py-1 rounded-full">BANKNIFTY</span>
-            <span class="bg-purple-950/60 border border-purple-500/30 text-purple-300 text-[10px] font-bold px-3 py-1 rounded-full">OPTIONS</span>
-        </div>
 
-        <!-- Primary CTA Button (Updated Link) -->
-        <a href="https://t.me/+AOgqAxYj9LFkOWFl" target="_blank" onclick="trackSubscribeEvent()" class="cta-btn-glow flex items-center justify-center gap-3 text-slate-950 font-black py-4 px-6 rounded-2xl w-full text-base mb-6 active:scale-95 transition-all uppercase tracking-wide">
-            <i class="fa-brands fa-telegram text-xl"></i>
-            <span>Join Free Telegram</span>
-            <i class="fa-solid fa-arrow-right text-sm"></i>
-        </a>
+<!-- HERO -->
+<section class="hero" id="home">
 
-        <!-- Key Highlights Box -->
-        <div class="inner-feature-box rounded-2xl p-4 mb-6 text-left">
-            <div class="flex items-center justify-between mb-3 pb-2.5 border-b border-slate-700/50">
-                <span class="text-xs font-black uppercase text-slate-300 tracking-wider">Market Intelligence</span>
-                <span class="text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded-full font-bold">Accuracy High</span>
-            </div>
+    <div class="hero-container">
 
-            <div class="space-y-3">
-                <div class="flex items-start gap-3">
-                    <div class="w-7 h-7 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shrink-0 mt-0.5">
-                        <i class="fa-solid fa-chart-line text-xs"></i>
-                    </div>
-                    <div>
-                        <p class="text-xs font-bold text-slate-100">100 - 300 Points Daily Target</p>
-                        <p class="text-[11px] text-slate-400">High-conviction observational index moves</p>
-                    </div>
-                </div>
+        <div>
+            <h1>
+                Building a <span>Brighter Future</span> Through Education
+            </h1>
 
-                <div class="flex items-start gap-3">
-                    <div class="w-7 h-7 rounded-lg bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 shrink-0 mt-0.5">
-                        <i class="fa-solid fa-bullseye text-xs"></i>
-                    </div>
-                    <div>
-                        <p class="text-xs font-bold text-slate-100">80% - 90% Accuracy Rate</p>
-                        <p class="text-[11px] text-slate-400">Data-backed trade setups & analysis</p>
-                    </div>
-                </div>
-
-                <div class="flex items-start gap-3">
-                    <div class="w-7 h-7 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0 mt-0.5">
-                        <i class="fa-solid fa-gift text-xs"></i>
-                    </div>
-                    <div>
-                        <p class="text-xs font-bold text-slate-100">Daily Free Demo Calls</p>
-                        <p class="text-[11px] text-slate-400">3-4 observational trade setups daily</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-4 pt-3 border-t border-slate-700/50 flex items-center justify-between text-[11px] text-slate-400 font-medium">
-                <span><i class="fa-solid fa-bolt text-amber-400 mr-1"></i> FII / DII Live Data</span>
-                <span><i class="fa-solid fa-lock text-emerald-400 mr-1"></i> 100% Free Access</span>
-            </div>
-        </div>
-
-        <!-- Secondary CTA (Updated Link) -->
-       <!-- MaxMedia -->
-  <div class="mm">
-    <a href="https://t.me/+Bo2PqlzG1UFlNTNl" target="_blank">
-      <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-      Ad Run By Scale Media ads
-  </div>
-
-        <!-- Footer Links & Popup Triggers -->
-        <div class="border-t border-slate-800/80 pt-4">
-            <div class="flex flex-wrap justify-center gap-x-3 gap-y-1 text-[11px] text-slate-400 font-semibold mb-3">
-                <button onclick="openModal('about')" class="hover:text-emerald-400 transition-colors">About Us</button>
-                <span>•</span>
-                <button onclick="openModal('terms')" class="hover:text-emerald-400 transition-colors">Terms & Conditions</button>
-                <span>•</span>
-                <button onclick="openModal('disclaimer')" class="hover:text-emerald-400 transition-colors">Disclaimer</button>
-                <span>•</span>
-                <button onclick="openModal('contact')" class="hover:text-emerald-400 transition-colors">Contact Us</button>
-            </div>
-            
-            <div class="inline-flex items-center gap-1.5 text-[10px] text-slate-500 font-medium mb-1">
-                <i class="fa-solid fa-shield-halved text-emerald-400"></i>
-                <span>Meta Pixel Active (ID: 1720478142456221)</span>
-            </div>
-            <p class="text-[10px] text-slate-600">
-                © Marwadi STOCK SELECTION — All Rights Reserved
+            <p>
+                We believe quality education creates opportunities, develops
+                confidence and prepares students for a successful future.
             </p>
-        </div>
 
-    </div>
-
-    <!-- Popup Modal Component -->
-    <div id="infoModal" class="modal fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
-        <div class="relative w-full max-w-md bg-slate-900 border border-slate-700 rounded-3xl p-6 text-left shadow-2xl max-h-[80vh] overflow-y-auto">
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-
-            <!-- Dynamic Content Container -->
-            <div id="modalContent"></div>
-        </div>
-    </div>
-
-    <script>
-        // Modal Logic
-        const modalData = {
-            about: `
-                <h3 class="text-lg font-black text-emerald-400 mb-2">About Us</h3>
-                <p class="text-slate-300 text-xs leading-relaxed mb-3">WAY2LAABH Stock Selection market analytics aur intelligence support provide karta hai. Hum stock options, Nifty, aur BankNifty ki deep market analysis share karte hain taaki traders informative decisions le sakein.</p>
-                <p class="text-slate-400 text-xs leading-relaxed">Hamara mission trader community ko live updates aur qualitative research-backed data se empower karna hai.</p>
-            `,
-            terms: `
-                <h3 class="text-lg font-black text-emerald-400 mb-2">Terms & Conditions</h3>
-                <p class="text-slate-300 text-xs leading-relaxed mb-2">1. Sabhi updates aur posts sirf educational aur informational purpose ke liye hain.</p>
-                <p class="text-slate-300 text-xs leading-relaxed mb-2">2. Hum kisi bhi tarah ke guaranteed profit ka claim nahi karte.</p>
-                <p class="text-slate-300 text-xs leading-relaxed">3. Telegram channel ya website ki information par trade karne se pehle apne financial advisor se salah zaroor lein.</p>
-            `,
-            disclaimer: `
-                <h3 class="text-lg font-black text-emerald-400 mb-2">Disclaimer</h3>
-                <p class="text-slate-300 text-xs leading-relaxed mb-3">Stock trading aur options trading me high financial risk shamil hota hai. Aap apna poora capital bhi kho sakte hain.</p>
-                <p class="text-slate-300 text-xs leading-relaxed">Hum SEBI registered advisor NAHI hain. Hamari sari calls aur analysis sirf educational purpose ke liye hain. Kisi bhi loss ke liye WAY2LAABH zimmedar nahi hoga.</p>
-            `,
-            contact: `
-                <h3 class="text-lg font-black text-emerald-400 mb-2">Contact Us</h3>
-                <p class="text-slate-300 text-xs leading-relaxed mb-3">Kisi bhi query ya support ke liye aap humse Telegram par contact kar sakte hain:</p>
-                <a href="https://t.me/+so3mwHYA5_00YzE9" target="_blank" class="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 text-xs px-4 py-2 rounded-xl font-bold">
-                    <i class="fa-brands fa-telegram"></i> Official Support Telegram
+            <div class="buttons">
+                <a href="#proposal" class="btn btn-primary">
+                    View Proposal
                 </a>
-            `
-        };
-        function openModal(type) {
-            document.getElementById('modalContent').innerHTML = modalData[type];
-            document.getElementById('infoModal').classList.add('active');
-        }
 
-        function closeModal() {
-            document.getElementById('infoModal').classList.remove('active');
-        }
+                <a href="#contact" class="btn btn-outline">
+                    Contact Us
+                </a>
+            </div>
+        </div>
 
-        // Close on background click
-        document.getElementById('infoModal').addEventListener('click', function(e) {
-            if (e.target === this) closeModal();
-        });
 
-        // Pixel tracking function
-        function trackSubscribeEvent() {
-            if (typeof fbq !== 'undefined') {
-                fbq('track', 'Subscribe', {
-                    value: '0.00',
-                    currency: 'INR',
-                    predicted_ltv: '0.00'
-                });
-            }
-        }
+        <div class="hero-card">
 
-        // Stars Background Animation
-        const canvas = document.getElementById('canvas-stars');
-        const ctx = canvas.getContext('2d');
-        let width, height, stars = [];
+            <h3>Education Proposal</h3>
 
-        function resizeCanvas() {
-            width = canvas.width = window.innerWidth;
-            height = canvas.height = window.innerHeight;
-            initStars();
-        }
+            <p>
+                A structured approach towards quality learning,
+                skill development and career growth.
+            </p>
 
-        function initStars() {
-            stars = [];
-            const count = Math.floor((width * height) / 3500);
-            for (let i = 0; i < count; i++) {
-                stars.push({
-                    x: Math.random() * width,
-                    y: Math.random() * height,
-                    radius: Math.random() * 1.2 + 0.3,
-                    alpha: Math.random(),
-                    speed: Math.random() * 0.01 + 0.005,
-                    twinkleDir: Math.random() > 0.5 ? 1 : -1,
-                    color: ['#ffffff', '#6ee7b7', '#93c5fd'][Math.floor(Math.random() * 3)]
-                });
-            }
-        }
+            <div class="stat">
+                <span>Learning Focus</span>
+                <strong>100%</strong>
+            </div>
 
-        function animateStars() {
-            ctx.clearRect(0, 0, width, height);
-            stars.forEach(star => {
-                star.alpha += star.speed * star.twinkleDir;
-                if (star.alpha >= 0.85) star.twinkleDir = -1;
-                if (star.alpha <= 0.15) star.twinkleDir = 1;
-                star.y -= star.speed * 12;
-                if (star.y < 0) {
-                    star.y = height;
-                    star.x = Math.random() * width;
-                }
-                ctx.beginPath();
-                ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-                ctx.fillStyle = star.color;
-                ctx.globalAlpha = Math.max(0, Math.min(1, star.alpha));
-                ctx.fill();
-            });
-            requestAnimationFrame(animateStars);
-        }
+            <div class="stat">
+                <span>Skill Development</span>
+                <strong>Priority</strong>
+            </div>
 
-        window.addEventListener('resize', resizeCanvas);
-        resizeCanvas();
-        animateStars();
-    </script>
+            <div class="stat">
+                <span>Career Guidance</span>
+                <strong>Available</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>About Our Vision</h2>
+            <p>Education designed for knowledge, skills and growth.</p>
+        </div>
+
+        <div class="about-grid">
+
+            <div class="about-box">
+
+                <h3>Our Mission</h3>
+
+                <p>
+                    Our mission is to create an accessible and engaging
+                    learning environment where students can develop
+                    knowledge, practical skills and confidence.
+                </p>
+
+            </div>
+
+            <div class="about-box">
+
+                <h3>Our Vision</h3>
+
+                <p>
+                    We aim to support learners with modern educational
+                    resources, experienced guidance and opportunities
+                    that help them move towards their academic and
+                    professional goals.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROGRAMS -->
+<section id="courses">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Our Programs</h2>
+
+            <p>
+                Learning opportunities designed around today's needs.
+            </p>
+
+        </div>
+
+
+        <div class="course-grid">
+
+            <div class="course">
+
+                <div class="icon">🎓</div>
+
+                <h3>Academic Learning</h3>
+
+                <p>
+                    Structured academic learning with clear concepts,
+                    regular practice and supportive guidance.
+                </p>
+
+            </div>
+
+
+            <div class="course">
+
+                <div class="icon">💻</div>
+
+                <h3>Digital Skills</h3>
+
+                <p>
+                    Develop essential digital skills for education,
+                    communication and modern workplaces.
+                </p>
+
+            </div>
+
+
+            <div class="course">
+
+                <div class="icon">📚</div>
+
+                <h3>Career Preparation</h3>
+
+                <p>
+                    Practical guidance to help learners understand
+                    career options and prepare for future opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="course">
+
+                <div class="icon">🧠</div>
+
+                <h3>Skill Development</h3>
+
+                <p>
+                    Focus on communication, problem solving,
+                    confidence and practical abilities.
+                </p>
+
+            </div>
+
+
+            <div class="course">
+
+                <div class="icon">👨‍🏫</div>
+
+                <h3>Mentorship</h3>
+
+                <p>
+                    Personalized guidance and mentorship to help
+                    learners stay focused on their goals.
+                </p>
+
+            </div>
+
+
+            <div class="course">
+
+                <div class="icon">🌐</div>
+
+                <h3>Online Learning</h3>
+
+                <p>
+                    Flexible learning resources designed to make
+                    education accessible from anywhere.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WHY US -->
+<section class="why">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Why Choose Us</h2>
+
+            <p>
+                A learner-focused approach to education.
+            </p>
+
+        </div>
+
+
+        <div class="why-grid">
+
+            <div class="why-box">
+                <div class="number">01</div>
+                <h3>Quality</h3>
+                <p>Focus on clear and meaningful learning.</p>
+            </div>
+
+            <div class="why-box">
+                <div class="number">02</div>
+                <h3>Support</h3>
+                <p>Guidance throughout the learning journey.</p>
+            </div>
+
+            <div class="why-box">
+                <div class="number">03</div>
+                <h3>Skills</h3>
+                <p>Practical skills for real-world needs.</p>
+            </div>
+
+            <div class="why-box">
+                <div class="number">04</div>
+                <h3>Growth</h3>
+                <p>Encouraging continuous improvement.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROPOSAL -->
+<section class="proposal" id="proposal">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Our Education Proposal</h2>
+
+            <p>
+                A simple framework for delivering effective education.
+            </p>
+
+        </div>
+
+
+        <div class="proposal-content">
+
+            <h3>Proposal Overview</h3>
+
+            <p>
+                This proposal focuses on developing a learner-friendly
+                educational environment that combines academic knowledge,
+                digital learning and practical skill development.
+            </p>
+
+            <ul class="proposal-list">
+
+                <li>Structured learning programs</li>
+
+                <li>Practical and skill-based education</li>
+
+                <li>Digital learning resources</li>
+
+                <li>Student mentorship and guidance</li>
+
+                <li>Career awareness and preparation</li>
+
+                <li>Continuous learning and development</li>
+
+            </ul>
+
+            <p>
+                Our objective is to create an education experience that
+                supports learners at every stage of their development.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="contact-grid">
+
+            <div>
+
+                <h2>Let's Build the Future Together</h2>
+
+                <p>
+                    Interested in our education proposal?
+                    Contact us to discuss programs, partnerships
+                    and learning opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="contact-item">
+                    <strong>📧 Email</strong>
+                    info@brightfutureeducation.com
+                </div>
+
+                <div class="contact-item">
+                    <strong>📞 Phone</strong>
+                    +91 98765 43210
+                </div>
+
+                <div class="contact-item">
+                    <strong>📍 Location</strong>
+                    India
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    © 2026 Bright Future Education. All Rights Reserved.
+
+</footer>
+
+
 </body>
 </html>
+```
